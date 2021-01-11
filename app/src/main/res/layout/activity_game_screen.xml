@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameScreen">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/matches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_weight="0.2"
+            android:text="/6 matches"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Chronometer
+            android:id="@+id/timer"
+            android:layout_width="500px"
+            android:layout_height="46dp"
+            android:gravity="top|right"
+            android:text="0:00:00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:numColumns="4"
+        android:orientation="vertical"
+        android:stretchMode="columnWidth"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.85"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!--            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"-->
+
+        <!--app:layout_constraintHeight_percent="0.95"-->
+
+
+    </GridView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
